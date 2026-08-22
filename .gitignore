@@ -1,0 +1,5 @@
+*
+!.gitignore
+!COPYING
+!early-init.el
+!init.el
