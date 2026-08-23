@@ -9,6 +9,12 @@
 ;; effectively disabling them.
 (setq custom-file (make-temp-file "emacs-custom"))
 
+;; Enable fuzzy completions too.
+(setq completion-styles '(basic
+                          partial-completion
+                          emacs22
+                          flex))
+
 (setq-default indent-tabs-mode nil)
 (setq-default require-final-newline t)
 
@@ -53,6 +59,11 @@
   (corfu-auto-prefix 2)
   :init
   (global-corfu-mode))
+
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode))
 
 (use-package eglot
   :ensure nil
