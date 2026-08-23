@@ -4,9 +4,10 @@
 
 (setq auto-save-default nil)
 (setq make-backup-files nil)
-;; Do NOT load customizations. Move them
-;; to another file though.
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+;; Move customizations to a temp file,
+;; effectively disabling them.
+(setq custom-file (make-temp-file "emacs-custom"))
 
 (setq-default indent-tabs-mode nil)
 (setq-default require-final-newline t)
