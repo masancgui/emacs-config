@@ -36,15 +36,20 @@
   :config
   (load-theme 'zenburn t))
 
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode 1))
+
 (use-package corfu
   :ensure t
   :custom
   (corfu-auto t)
+  (corfu-auto-prefix 2)
   :init
   (global-corfu-mode))
 
 (use-package eglot
-  :ensure nil)
-
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
+  :ensure nil
+  :hook ((c-mode . eglot-ensure)
+         (c++-mode . eglot-ensure)))
