@@ -12,13 +12,13 @@
 (setq-default indent-tabs-mode nil)
 (setq-default require-final-newline t)
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; Only show trailing whitespace in
 ;; certain buffers.
 (dolist (hook '(prog-mode-hook text-mode-hook))
   (add-hook hook (lambda () (setq show-trailing-whitespace t))))
 
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono-11"))
+
 ;; Emacs starts maximized as per the
 ;; early init, but set a fallback size.
 (add-to-list 'default-frame-alist '(width . 80))
