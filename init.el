@@ -57,8 +57,10 @@
   :custom
   (corfu-auto t)
   (corfu-auto-prefix 2)
+  (corfu-popupinfo-delay '(1.0 . 0.5))
   :init
-  (global-corfu-mode))
+  (global-corfu-mode)
+  (corfu-popupinfo-mode))
 
 (use-package marginalia
   :ensure t
