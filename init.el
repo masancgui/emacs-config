@@ -67,7 +67,14 @@
   :init
   (marginalia-mode))
 
+(use-package rust-mode
+  :ensure t)
+
+(use-package markdown-mode
+  :ensure t)
+
 (use-package eglot
   :ensure nil
   :hook ((c-mode . eglot-ensure)
-         (c++-mode . eglot-ensure)))
+         (c++-mode . eglot-ensure)
+         (rust-mode . eglot-ensure)))
