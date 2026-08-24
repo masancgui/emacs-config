@@ -23,6 +23,9 @@
 (dolist (hook '(prog-mode-hook text-mode-hook))
   (add-hook hook (lambda () (setq show-trailing-whitespace t))))
 
+;; Enable word wrap in Org mode.
+(add-hook 'org-mode-hook 'visual-line-mode)
+
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono-11"))
 
 ;; Emacs starts maximized as per the
