@@ -1,1 +1,3 @@
 #+TITLE: emacs-config
+
+This is my personal Emacs configuration. The only reason it is here is for convenience, so I can sync it more easily across machines.
