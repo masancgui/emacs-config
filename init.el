@@ -15,8 +15,14 @@
                           emacs22
                           flex))
 
+;; Make prompts (like the one in the
+;; shell mode) read-only.
+(setq comint-prompt-read-only t)
+
 (setq-default indent-tabs-mode nil)
 (setq-default require-final-newline t)
+
+(setq-default display-line-numbers-width 3)
 
 ;; Only show trailing whitespace in
 ;; certain buffers.
@@ -35,6 +41,7 @@
 
 (blink-cursor-mode -1)
 (electric-pair-mode 1)
+(delete-selection-mode 1)
 
 (global-display-line-numbers-mode 1)
 (column-number-mode 1)
@@ -49,6 +56,10 @@
   :ensure t
   :config
   (load-theme 'zenburn t))
+
+(use-package dired-sidebar
+  :ensure t
+  :bind (("C-x C-n" . dired-sidebar-toggle-sidebar)))
 
 (use-package yasnippet
   :ensure t
