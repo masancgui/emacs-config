@@ -60,6 +60,13 @@
   :ensure t
   :bind (("C-x C-n" . dired-sidebar-toggle-sidebar)))
 
+(use-package diff-hl
+  :ensure t
+  :init
+  (global-diff-hl-mode)
+  :config
+  (diff-hl-flydiff-mode))
+
 (use-package yasnippet
   :ensure t
   :config
