@@ -15,8 +15,8 @@
                           emacs22
                           flex))
 
-;; Make prompts (like the one in the
-;; shell mode) read-only.
+;; Make prompts (like the one in shell
+;; mode) read-only.
 (setq comint-prompt-read-only t)
 
 (setq-default indent-tabs-mode nil)
