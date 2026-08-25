@@ -80,7 +80,9 @@
   (corfu-popupinfo-delay '(1.0 . 0.5))
   :init
   (global-corfu-mode)
-  (corfu-popupinfo-mode))
+  (corfu-popupinfo-mode)
+  :config
+  (keymap-unset corfu-map "RET"))
 
 (use-package marginalia
   :ensure t
