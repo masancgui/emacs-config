@@ -21,7 +21,6 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default require-final-newline t)
-
 (setq-default display-line-numbers-width 3)
 
 ;; Only show trailing whitespace in
@@ -42,9 +41,9 @@
 (blink-cursor-mode -1)
 (electric-pair-mode 1)
 (delete-selection-mode 1)
+(column-number-mode 1)
 
 (global-display-line-numbers-mode 1)
-(column-number-mode 1)
 
 (require 'package)
 (package-initialize)
