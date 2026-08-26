@@ -29,7 +29,7 @@
   (add-hook hook (lambda () (setq show-trailing-whitespace t))))
 
 ;; Enable word wrap in Org mode.
-(add-hook 'org-mode-hook 'visual-line-mode)
+(add-hook 'org-mode-hook #'visual-line-mode)
 
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono-11"))
 
@@ -95,8 +95,16 @@
 (use-package markdown-mode
   :ensure t)
 
+(defun my/eglot-format-on-save ()
+  (add-hook 'before-save-hook #'eglot-format-buffer nil t))
+
 (use-package eglot
   :ensure nil
-  :hook ((c-mode . eglot-ensure)
-         (c++-mode . eglot-ensure)
-         (rust-mode . eglot-ensure)))
+  :hook (((c-mode
+           c++-mode
+           rust-mode)
+          . eglot-ensure)
+         ((c-mode
+           c++-mode
+           rust-mode)
+          . my/eglot-format-on-save)))
