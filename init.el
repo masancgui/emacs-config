@@ -4,6 +4,7 @@
 
 (setq auto-save-default nil)
 (setq make-backup-files nil)
+(setq dired-free-space nil)
 
 ;; Move customizations to a temp file,
 ;; effectively disabling them.
