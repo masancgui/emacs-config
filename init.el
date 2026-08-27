@@ -104,7 +104,4 @@
            c++-mode
            rust-mode)
           . eglot-ensure)
-         ((c-mode
-           c++-mode
-           rust-mode)
-          . my/eglot-format-on-save)))
+         (eglot-managed-mode . my/eglot-format-on-save)))
