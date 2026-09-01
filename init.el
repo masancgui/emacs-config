@@ -10,7 +10,9 @@
 ;; effectively disabling them.
 (setq custom-file (make-temp-file "emacs-custom"))
 
-;; Enable fuzzy completions too.
+;; Ignore case and enable fuzzy
+;; completion.
+(setq completion-ignore-case t)
 (setq completion-styles '(basic
                           partial-completion
                           emacs22
