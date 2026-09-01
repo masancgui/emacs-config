@@ -21,6 +21,7 @@
 (setq comint-prompt-read-only t)
 
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
 (setq-default require-final-newline t)
 (setq-default display-line-numbers-width 3)
 
